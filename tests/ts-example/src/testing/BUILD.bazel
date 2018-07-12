@@ -8,7 +8,7 @@ ts_library(
   srcs = [
     "sum.ts",
   ],
-  tsconfig = "//test:tsconfig.json",
+  tsconfig = "//tests/ts-example:tsconfig.json",
 )
 
 ts_library(
@@ -17,14 +17,14 @@ ts_library(
     "sum.spec.ts",
   ],
   deps = [
-    "//test:packages",
+    "//tests/ts-example:packages",
     ":sum",
   ],
   requires = [
     "jest",
     "@types/jest",
   ],
-  tsconfig = "//test:tsconfig.json",
+  tsconfig = "//tests/ts-example:tsconfig.json",
 )
 
 js_test(
